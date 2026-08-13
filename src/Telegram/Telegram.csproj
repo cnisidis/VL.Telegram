@@ -1,22 +1,18 @@
 <Project Sdk="Microsoft.NET.Sdk">
-
   <PropertyGroup>
     <TargetFramework>net8.0</TargetFramework>
     <ImplicitUsings>enable</ImplicitUsings>
     <Nullable>enable</Nullable>
     <GenerateDocumentationFile>True</GenerateDocumentationFile>
   </PropertyGroup>
-
   <ItemGroup>
     <PackageReference Include="Telegram.Bot" Version="22.7.2" />
-    <PackageReference Include="VL.Core" Version="2025.7.0-0569-gd8eda191f6" />
+    <PackageReference Include="VL.Core" Version="2025.7.4" />
   </ItemGroup>
-
   <ItemGroup>
     <Using Include="VL.Core" />
     <Using Include="VL.Core.Import" />
     <Using Include="VL.Lib.Collections" />
     <Using Include="Stride.Core.Mathematics" />
   </ItemGroup>
-
 </Project>

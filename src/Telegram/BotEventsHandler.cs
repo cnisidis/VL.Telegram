@@ -19,7 +19,9 @@ namespace VL.TelegramUtils
         CancellationTokenSource _cts = new CancellationTokenSource();
         Task _running;
         bool isRunning;
-        public Delegate DoSomething { set; get; };
+        public Func<Message, UpdateType, Message> OnMessageReceieved { set; get; }
+
+        
 
         public BotEventsHandler(string Token)
         {
@@ -27,7 +29,7 @@ namespace VL.TelegramUtils
             isRunning = true;
             _running = RunAsync();
 
-            
+            bot.OnMessage += OnMessage;
         }
 
         public async Task RunAsync()
@@ -63,14 +65,9 @@ namespace VL.TelegramUtils
         }
 
         // method that handle messages received by the bot:
-        async Task OnMessage(Message msg, UpdateType type)
+        public async Task OnMessage(Message msg, UpdateType type)
         {
-            DoSomething.DynamicInvoke();
-            if (msg.Text == "/start")
-            {
-                await bot.SendMessage(msg.Chat, "Welcome! Pick one direction",
-                    replyMarkup: new InlineKeyboardButton[] { "Left", "Right" });
-            }
+            var ms = OnMessageReceieved.Invoke(msg, type);
         }
 
         // method that handle other types of updates received by the bot:

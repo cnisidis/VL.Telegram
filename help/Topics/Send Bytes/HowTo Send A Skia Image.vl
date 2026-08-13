@@ -1,0 +1,200 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Document xmlns:p="property" xmlns:r="reflection" Id="QGmjkul8aTbPkMjQQ3s4Hm" LanguageVersion="2025.7.4" Version="0.128">
+  <NugetDependency Id="I6uCpaVNAebNK7CFeoK07k" Location="VL.CoreLib" Version="2025.7.4" />
+  <Patch Id="UW10ve57rQDPtVA3pKHQ1q">
+    <Canvas Id="Mv7ToidNv1MLN5Ooed7ASz" DefaultCategory="Main" BordersChecked="false" CanvasType="FullCategory" />
+    <!--
+
+    ************************ Application ************************
+
+-->
+    <Node Name="Application" Bounds="100,100" Id="Lr5X4pCh71LMYPUpJ3uS2x">
+      <p:NodeReference>
+        <Choice Kind="ContainerDefinition" Name="Process" />
+        <CategoryReference Kind="Category" Name="Primitive" />
+      </p:NodeReference>
+      <Patch Id="AN743eXmJ9aPCwkzHC7DbP">
+        <Canvas Id="BYzQdxhT09VMQS6MRpEGOv" CanvasType="Group">
+          <Node Bounds="471,80,65,19" Id="OjTamHn44IqPMwMIGse65A">
+            <p:NodeReference LastCategoryFullName="IO.Telegram.Bot" LastDependency="VL.Telegram.vl">
+              <Choice Kind="NodeFlag" Name="Node" Fixed="true" />
+              <CategoryReference Kind="Category" Name="Telegram" />
+              <CategoryReference Kind="Category" Name="Bot" />
+              <Choice Kind="ProcessAppFlag" Name="BotClient" />
+            </p:NodeReference>
+            <Pin Id="D5WyLjQvzXFPPmBtxwNBGc" Name="Node Context" Kind="InputPin" IsHidden="true" />
+            <Pin Id="HkCfgAicYhjQDPmMYlcb0T" Name="Token" Kind="InputPin" />
+            <Pin Id="ENMt27oTqliPLHZZ9TxH1C" Name="Base Url" Kind="InputPin" />
+            <Pin Id="DJ2PnXMmds7MJtJ2DQue7r" Name="Use Test Environment" Kind="InputPin" />
+            <Pin Id="H47cYPD9q2cQKwNzAhAEZB" Name="Receiver Options" Kind="InputPin" />
+            <Pin Id="FlhlvefiiR7OlPQz6gJqwH" Name="botclient" Kind="OutputPin" />
+            <Pin Id="HGzZ5CBzOdLQcDQBq6MLkY" Name="Name" Kind="OutputPin" />
+          </Node>
+          <Node Bounds="511,360,80,19" Id="VRSXOhURT7aNyXF3RPDHnq">
+            <p:NodeReference LastCategoryFullName="Graphics.Skia.Imaging" LastDependency="VL.Skia.vl">
+              <Choice Kind="NodeFlag" Name="Node" Fixed="true" />
+              <Choice Kind="OperationCallFlag" Name="ImageEncoder" />
+            </p:NodeReference>
+            <Pin Id="N6i6c8AkM0fN5zEESzw9p2" Name="Input" Kind="InputPin" />
+            <Pin Id="PyChesK6bW0N4RmBGLey0B" Name="Format" Kind="InputPin" DefaultValue="Webp" />
+            <Pin Id="FFWxM2xgWtyOBdg76sM4K1" Name="Quality" Kind="InputPin" />
+            <Pin Id="AnDuPLKii44PLRcTT7JJbe" Name="Output" Kind="OutputPin" />
+          </Node>
+          <Node Bounds="471,470,105,19" Id="AW822SrKEv3LzLldhe8yu9">
+            <p:NodeReference LastCategoryFullName="IO.Telegram.Bot.BotClient" LastDependency="VL.Telegram.vl">
+              <Choice Kind="NodeFlag" Name="Node" Fixed="true" />
+              <Choice Kind="ProcessAppFlag" Name="SendBytesAs" />
+            </p:NodeReference>
+            <Pin Id="MSWFQ6yX3HQOAXEa6u2jA3" Name="Node Context" Kind="InputPin" IsHidden="true" />
+            <Pin Id="CQZFhJ8epqJOgzs08Dy8kU" Name="Bot" Kind="InputPin" />
+            <Pin Id="D0oR95sKEhsQFEdMtnXSVi" Name="Chat Id" Kind="InputPin" />
+            <Pin Id="Ch6j2ZsCA0lLBRGNhTf6WC" Name="Bytes" Kind="InputPin" />
+            <Pin Id="CBcckKiJodCNEulRfgco12" Name="Caption" Kind="InputPin" />
+            <Pin Id="NzGbbCzlPlKNuwcdNltfQS" Name="Send" Kind="InputPin" />
+            <Pin Id="TjVmxpgj4JrPaGtECe8lpA" Name="Cancel" Kind="InputPin" />
+            <Pin Id="I7JMotfI5WEPx4hiiPv7xA" Name="On Finished" Kind="OutputPin" />
+            <Pin Id="EbLQ3YBthmgL1ZsZFWMQgF" Name="On Exception" Kind="OutputPin" />
+            <Pin Id="Ha57ifi8iSLPhagmhjmhRQ" Name="Duration" Kind="OutputPin" />
+          </Node>
+          <Node Bounds="511,390,83,26" Id="JKK16e71UXgNEppcZ3hwTF">
+            <p:NodeReference LastCategoryFullName="Collections.Spread" LastDependency="VL.CoreLib.vl">
+              <Choice Kind="NodeFlag" Name="Node" Fixed="true" />
+              <CategoryReference Kind="RecordType" Name="Spread" NeedsToBeDirectParent="true" />
+              <Choice Kind="OperationCallFlag" Name="FromSequence" />
+            </p:NodeReference>
+            <Pin Id="Qgy60llodJ6PzzssxEAIcC" Name="Input" Kind="StateInputPin" />
+            <Pin Id="R7GqpCNYNEEPAlVnw2Do9C" Name="Result" Kind="OutputPin" />
+          </Node>
+          <Node Bounds="511,310,165,19" Id="LigLTtzVcC4NVBEC1eFeT4">
+            <p:NodeReference LastCategoryFullName="Graphics.Skia" LastDependency="VL.Skia.vl">
+              <Choice Kind="NodeFlag" Name="Node" Fixed="true" />
+              <Choice Kind="ProcessAppFlag" Name="Renderer (OffScreen)" />
+            </p:NodeReference>
+            <Pin Id="PohojRdMUcmP7gIoAC0LCT" Name="Node Context" Kind="InputPin" IsHidden="true" />
+            <Pin Id="F2iKAHx5kiXOMXd72WiIpF" Name="Layer" Kind="InputPin" />
+            <Pin Id="Ao22G9lgNkmPkFQRoBA2z2" Name="Color" Kind="InputPin" />
+            <Pin Id="DaJZwROv9GXPY2AZGcqczX" Name="Clear" Kind="InputPin" />
+            <Pin Id="JkU6bD74XwANKBF5Qp96cD" Name="Space" Kind="InputPin" />
+            <Pin Id="EFPcIlBLMc0OlzYFzCDNjX" Name="Width" Kind="InputPin" />
+            <Pin Id="N7yEarNxeaaO6fJwm6obgP" Name="Height" Kind="InputPin" />
+            <Pin Id="UOjuiTq437cNSxIxibVwd6" Name="Mouse" Kind="InputPin" />
+            <Pin Id="HH4SuXtEwqLL8uCz7P0Y2x" Name="Keyboard" Kind="InputPin" />
+            <Pin Id="DvzHQfCTfCgL47cmc9UdHA" Name="Enabled" Kind="InputPin" />
+            <Pin Id="HfkpUpfwYZMOBfiK8hHNAn" Name="Result" Kind="OutputPin" />
+          </Node>
+          <Pad Id="N8YyUQiNzDHLVXQFyQbOBe" Comment="Height" Bounds="613,281,35,15" ShowValueBox="true" isIOBox="true" Value="512">
+            <p:TypeAnnotation LastCategoryFullName="Primitive" LastDependency="VL.CoreLib.vl">
+              <Choice Kind="TypeFlag" Name="Integer32" />
+            </p:TypeAnnotation>
+          </Pad>
+          <Pad Id="KI9bT9wJdvVLEpcB8E58IN" Comment="Token" Bounds="473,30,304,18" ShowValueBox="true" isIOBox="true" Value="8132865432:AAHx9bD0UP7vO_tBLBAPAsrX9zQSGZ6EJkw">
+            <p:TypeAnnotation LastCategoryFullName="Primitive" LastDependency="VL.CoreLib.vl">
+              <Choice Kind="TypeFlag" Name="String" />
+            </p:TypeAnnotation>
+          </Pad>
+          <Node Bounds="471,130,202,118" Id="GqX0aiiuJJLO9cNEsLejUh">
+            <p:NodeReference LastCategoryFullName="IO.Telegram.Bot.BotClient" LastDependency="VL.Telegram.vl">
+              <Choice Kind="RegionFlag" Name="Region (Stateless)" Fixed="true" />
+              <Choice Kind="ProcessAppFlag" Name="OnMessage" />
+            </p:NodeReference>
+            <Pin Id="BVEea398QavPEEWKQCQA4M" Name="Node Context" Kind="InputPin" IsHidden="true" />
+            <Pin Id="Ge5naO0AAwgQTSN0yDUjvO" Name="Bot" Kind="InputPin" />
+            <Pin Id="UCVd6CAxGIEMF7EQiYxF0e" Name="Bot" Kind="OutputPin" />
+            <Patch Id="TRxJhPUCakWQA9HMSl30ia" Name="Handler" ManuallySortedPins="true">
+              <Pin Id="CX4IMI62mTsOZUhhxf7jbI" Name="Message" Kind="InputPin" />
+              <Pin Id="J9LayGzZlKaPiXrMBe3J5D" Name="Type" Kind="InputPin" />
+              <Pin Id="M8U69ow0bVlORFW5J134vh" Name="Result" Kind="OutputPin" />
+              <ControlPoint Id="HanbtQ7giBKK90fc9P0oQa" Bounds="531,145" />
+              <ControlPoint Id="Go7e30c216QMHULyWc2g8W" Bounds="622,138" />
+              <ControlPoint Id="LQEKxR6juUPNUYYznVDWx6" Bounds="622,241" />
+              <Node Bounds="529,167,61,19" Id="C4c6RD1lnn5QTuObjJzkPG">
+                <p:NodeReference LastCategoryFullName="IO.Telegram.Message" LastDependency="VL.Telegram.vl">
+                  <Choice Kind="NodeFlag" Name="Node" Fixed="true" />
+                  <Choice Kind="OperationCallFlag" Name="GetChatId" />
+                </p:NodeReference>
+                <Pin Id="H2raLW8TkvzPtnHDjtWlyA" Name="Message" Kind="InputPin" />
+                <Pin Id="P8NRcKQ2jqFQRbRz3mlWnP" Name="Id" Kind="OutputPin" />
+              </Node>
+              <Node Bounds="483,200,51,26" Id="UGPY32pmLkCNBwQldGKPet">
+                <p:NodeReference LastCategoryFullName="Primitive.Reference" LastDependency="VL.CoreLib.vl">
+                  <Choice Kind="NodeFlag" Name="Node" Fixed="true" />
+                  <CategoryReference Kind="ClassType" Name="Reference" />
+                  <Choice Kind="OperationCallFlag" Name="SetData" />
+                </p:NodeReference>
+                <Pin Id="SS9uoy9yqCeQEk2NJMO7WV" Name="Input" Kind="StateInputPin" />
+                <Pin Id="QZaE0FlcaQ1LBM7Z3TwqNE" Name="Data" Kind="InputPin" />
+                <Pin Id="Aos4spT5uBPPJj6QKKnFK5" Name="Output" Kind="StateOutputPin" />
+              </Node>
+            </Patch>
+          </Node>
+          <Pad Id="Kpj2ywkMBouNijABvdSAhr" Comment="Send" Bounds="553,430,35,35" ShowValueBox="true" isIOBox="true" Value="false">
+            <p:TypeAnnotation LastCategoryFullName="Primitive" LastDependency="VL.CoreLib.vl">
+              <Choice Kind="ImmutableTypeFlag" Name="Boolean" />
+            </p:TypeAnnotation>
+            <p:ValueBoxSettings>
+              <p:buttonmode p:Assembly="VL.UI.Forms" p:Type="VL.HDE.PatchEditor.Editors.ButtonModeEnum">Bang</p:buttonmode>
+            </p:ValueBoxSettings>
+          </Pad>
+          <Node Bounds="511,280,85,19" Id="Hewi0dlAgx3OAFswzuFO3B">
+            <p:NodeReference LastCategoryFullName="Graphics.Skia.Layers" LastDependency="VL.Skia.vl">
+              <Choice Kind="NodeFlag" Name="Node" Fixed="true" />
+              <Choice Kind="ProcessAppFlag" Name="Circle" />
+            </p:NodeReference>
+            <Pin Id="Pgj7Y10HoHJPo4aHhyYA8f" Name="Node Context" Kind="InputPin" IsHidden="true" />
+            <Pin Id="DRk4EGJO5hJPBpyUW1Bwmd" Name="Position" Kind="InputPin" />
+            <Pin Id="OF12yLqzeG5QEYI5anbv6c" Name="Radius" Kind="InputPin" />
+            <Pin Id="UwKIZNXsIjBPRobKfa6WvU" Name="Anchor" Kind="InputPin" />
+            <Pin Id="Gu6UqEtrFHMMTC62Prox4H" Name="Paint" Kind="InputPin" />
+            <Pin Id="J2vR2EwNtnOOmfmoV8O6lH" Name="Enabled" Kind="InputPin" />
+            <Pin Id="JHJ6gYp0PM6Odcz6rhNXQh" Name="Output" Kind="OutputPin" />
+          </Node>
+          <Pad Id="H89uLGOCigqN7Sg7rgi8pq" Comment="Format" Bounds="551,341,55,15" ShowValueBox="true" isIOBox="true" Value="Webp">
+            <p:TypeAnnotation LastCategoryFullName="Graphics.Skia.Imaging" LastDependency="VL.Skia.vl">
+              <Choice Kind="TypeFlag" Name="EncodedSkiaImageFormat" />
+            </p:TypeAnnotation>
+          </Pad>
+          <Pad Id="Ct4o7PGPFelP93s97VEutv" SlotId="G8fyi3HRwUnMbFhH3DePfK" Bounds="485,181" />
+          <Pad Id="RdDydd4yLjQL0Tr0kKaTc1" SlotId="G8fyi3HRwUnMbFhH3DePfK" Bounds="447,400" />
+          <Node Bounds="445,410,51,26" Id="BoIMtkzxYe3Npp55sy6gTH">
+            <p:NodeReference LastCategoryFullName="Primitive.Reference" LastDependency="VL.CoreLib.vl">
+              <Choice Kind="NodeFlag" Name="Node" Fixed="true" />
+              <CategoryReference Kind="ClassType" Name="Reference" NeedsToBeDirectParent="true" />
+              <Choice Kind="OperationCallFlag" Name="Data" />
+            </p:NodeReference>
+            <Pin Id="OplLS02Jkt4PBcexT7Pfko" Name="Input" Kind="StateInputPin" />
+            <Pin Id="HM3oOhm9TRCQEsFzj5E633" Name="Output" Kind="StateOutputPin" />
+            <Pin Id="OfeM0vvY6dHK9r5VMFSSK2" Name="Data" Kind="OutputPin" />
+          </Node>
+        </Canvas>
+        <Patch Id="QpH9AhWxRDZNmGEJr6ezE8" Name="Create" />
+        <Patch Id="Fn4NomAdbMgPvu84oKyGRD" Name="Update" />
+        <ProcessDefinition Id="LmYEtRarCoqNwQFpIW00Oa">
+          <Fragment Id="BczWnsxZrIcMgRxjKFSvLO" Patch="QpH9AhWxRDZNmGEJr6ezE8" Enabled="true" />
+          <Fragment Id="SidpGf1pDU2OKemI68buyH" Patch="Fn4NomAdbMgPvu84oKyGRD" Enabled="true" />
+        </ProcessDefinition>
+        <Link Id="HYGC5AM98d4MHcNyP6aLPo" Ids="AnDuPLKii44PLRcTT7JJbe,Qgy60llodJ6PzzssxEAIcC" />
+        <Link Id="RQESXXF4kJYLX96lU9nH9i" Ids="R7GqpCNYNEEPAlVnw2Do9C,Ch6j2ZsCA0lLBRGNhTf6WC" />
+        <Link Id="UP8XqRVzvMOLSoo5wCtMuJ" Ids="HfkpUpfwYZMOBfiK8hHNAn,N6i6c8AkM0fN5zEESzw9p2" />
+        <Link Id="KheDNpHscyPOCjgigcDfN8" Ids="N8YyUQiNzDHLVXQFyQbOBe,N7yEarNxeaaO6fJwm6obgP" />
+        <Link Id="TE3G4m80thwQAbsuwgtAMq" Ids="N8YyUQiNzDHLVXQFyQbOBe,EFPcIlBLMc0OlzYFzCDNjX" />
+        <Link Id="R2WIixfSe15QapRreMJbVy" Ids="KI9bT9wJdvVLEpcB8E58IN,HkCfgAicYhjQDPmMYlcb0T" />
+        <Link Id="NfevHL3qOAPNkRg1JHU2zO" Ids="CX4IMI62mTsOZUhhxf7jbI,HanbtQ7giBKK90fc9P0oQa" IsHidden="true" />
+        <Link Id="PSxWuCetlxXM9Ef2XEbcny" Ids="J9LayGzZlKaPiXrMBe3J5D,Go7e30c216QMHULyWc2g8W" IsHidden="true" />
+        <Link Id="Mw2flor9nlyOhwkBX5j3YO" Ids="LQEKxR6juUPNUYYznVDWx6,M8U69ow0bVlORFW5J134vh" IsHidden="true" />
+        <Link Id="D6NXwqlXgQUPmvyUWLRVua" Ids="FlhlvefiiR7OlPQz6gJqwH,Ge5naO0AAwgQTSN0yDUjvO" />
+        <Link Id="Ejzmtc2G3KXPCOgxgSbdIG" Ids="HanbtQ7giBKK90fc9P0oQa,H2raLW8TkvzPtnHDjtWlyA" />
+        <Link Id="TAVI4DSKNGzMosoMsa86RZ" Ids="Kpj2ywkMBouNijABvdSAhr,NzGbbCzlPlKNuwcdNltfQS" />
+        <Link Id="Dokl5ccg7msNSbpYEgefHz" Ids="JHJ6gYp0PM6Odcz6rhNXQh,F2iKAHx5kiXOMXd72WiIpF" />
+        <Link Id="C7AXLitcggbQURFpdE4kzA" Ids="H89uLGOCigqN7Sg7rgi8pq,PyChesK6bW0N4RmBGLey0B" />
+        <Link Id="PH6rzydnnhYLxG33aZ5JEj" Ids="P8NRcKQ2jqFQRbRz3mlWnP,QZaE0FlcaQ1LBM7Z3TwqNE" />
+        <Slot Id="G8fyi3HRwUnMbFhH3DePfK" Name="Chat Id" />
+        <Link Id="MlHjTN8dXGCN5mPazxC6cL" Ids="Ct4o7PGPFelP93s97VEutv,SS9uoy9yqCeQEk2NJMO7WV" />
+        <Link Id="T4pav51I80QLsdcqAti5t4" Ids="RdDydd4yLjQL0Tr0kKaTc1,OplLS02Jkt4PBcexT7Pfko" />
+        <Link Id="LHYNX7Ah04OMmQqWm5fMom" Ids="OfeM0vvY6dHK9r5VMFSSK2,D0oR95sKEhsQFEdMtnXSVi" />
+        <Link Id="MF9AKqS1c6aNHpOvDDuOOx" Ids="UCVd6CAxGIEMF7EQiYxF0e,CQZFhJ8epqJOgzs08Dy8kU" />
+      </Patch>
+    </Node>
+  </Patch>
+  <NugetDependency Id="OCNPp8jouWFPgzB3HgrMYO" Location="VL.Telegram" Version="0.0.0" />
+  <NugetDependency Id="HLMFtlq36y5O7Vo3K2lCvU" Location="VL.Skia" Version="2025.7.4" />
+</Document>
